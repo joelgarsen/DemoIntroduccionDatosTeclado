@@ -2,4 +2,10 @@
 comment0.target=DemoDemoIntroduccionDatosTeclado
 comment1.params=
 comment1.target=void\ demoIntoducci\u00F3nDatosTeclado()
-numComments=2
+comment2.params=
+comment2.target=void\ multiplicarDosNumeros()
+comment3.params=
+comment3.target=void\ convertirDeEuroADolar()
+comment4.params=
+comment4.target=void\ convertirDeDolarAEuro()
+numComments=5
