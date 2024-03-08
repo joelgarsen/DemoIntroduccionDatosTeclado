@@ -102,4 +102,22 @@ public class DemoDemoIntroduccionDatosTeclado {
         
         scanner.close();
     }
+    
+    public void calcularNoptaSegundoExamen() {
+        Scanner scanner = new Scanner (System.in);
+        
+        System.out.print("Introduce la nota del primer examen: ");
+        double notaUno = scanner.nextDouble();
+        scanner.nextLine();
+        
+        System.out.print("¿Qué nota final quieres?: ");
+        double notaFinal = scanner.nextDouble();
+        scanner.nextLine();
+        
+        double notaDos = (2 * notaFinal) - notaUno;
+        
+        System.out.print("Para tener un " + notaFinal + " en la nota final necesitas sacar un " + notaDos + " en el segundo examen.");
+
+        scanner.close();
+    }
 }
