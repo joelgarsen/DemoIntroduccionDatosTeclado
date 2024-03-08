@@ -94,11 +94,11 @@ public class DemoDemoIntroduccionDatosTeclado {
         }
         double descuentoTotal = precioConIva - cantidadDeDescuento;
         
-        System.out.print("Base imponible: " + centimos + "\n");
+        System.out.print("Base imponible: " + centimos / 100 + "\n");
         System.out.print("Iva (general = 21%, reducido = 10%, supereducido = 4%): " + iva + "\n");
-        System.out.print("Precio con IVA: " + precioConIva + "\n");
-        System.out.print("Descuento por código promocional (sinpro,alamitad,5menos,5porcen): " + cantidadDeDescuento + "\n");
-        System.out.print("TOTAL: " + descuentoTotal);
+        System.out.print("Precio con IVA: " + precioConIva / 100 + "\n");
+        System.out.print("Descuento por código promocional (sinpro,alamitad,5menos,5porcen): " + cantidadDeDescuento / 100 + "\n");
+        System.out.print("TOTAL: " + descuentoTotal /100);
         
         scanner.close();
     }
