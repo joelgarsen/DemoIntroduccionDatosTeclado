@@ -55,4 +55,51 @@ public class DemoDemoIntroduccionDatosTeclado {
         System.out.print("Su valor en dolares es: " + euro);
         scanner.close();
     }
+    
+    public void mostrarFactura() {
+        Scanner scanner = new Scanner (System.in);
+        
+        System.out.print("Base imponible: ");
+        double centimos = scanner.nextDouble();
+        scanner.nextLine();
+        
+        System.out.print("Iva (general = 21%, reducido = 10%, superreducido = 4%): ");
+        String iva = scanner.nextLine();
+        double precioConIva = centimos;
+        if (iva.equals("general")) {
+            precioConIva = centimos * 1.21;
+        }
+        if (iva.equals("reducido")) {
+            precioConIva = centimos * 1.1;
+        }
+        if (iva.equals("superreducido")) {
+            precioConIva = centimos * 1.04;
+        }
+        
+        
+        System.out.print("Descuento por código promocional (sinpro,alamitad,5menos,5porcen): ");
+        String descuento = scanner.nextLine();
+        double cantidadDeDescuento = 0.00;
+        if(descuento.equals("sinpro")) {
+            cantidadDeDescuento = 0;
+        }
+        if(descuento.equals("alamitad")) {
+            cantidadDeDescuento = precioConIva / 2;
+        }
+        if(descuento.equals("5menos")) {
+            cantidadDeDescuento = 5; 
+        }
+        if(descuento.equals("5porcen")) {
+            cantidadDeDescuento = precioConIva * 0.05;
+        }
+        double descuentoTotal = precioConIva - cantidadDeDescuento;
+        
+        System.out.print("Base imponible: " + centimos + "\n");
+        System.out.print("Iva (general = 21%, reducido = 10%, supereducido = 4%): " + iva + "\n");
+        System.out.print("Precio con IVA: " + precioConIva + "\n");
+        System.out.print("Descuento por código promocional (sinpro,alamitad,5menos,5porcen): " + cantidadDeDescuento + "\n");
+        System.out.print("TOTAL: " + descuentoTotal);
+        
+        scanner.close();
+    }
 }
