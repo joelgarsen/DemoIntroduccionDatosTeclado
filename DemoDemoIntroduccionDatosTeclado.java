@@ -114,10 +114,13 @@ public class DemoDemoIntroduccionDatosTeclado {
         double notaFinal = scanner.nextDouble();
         scanner.nextLine();
         
-        double notaDos = (2 * notaFinal) - notaUno;
+        double maximo = 10;
+        
+        double notaDos = (notaFinal - (0.4 * notaUno)) / 0.6;
         
         System.out.print("Para tener un " + notaFinal + " en la nota final necesitas sacar un " + notaDos + " en el segundo examen.");
 
         scanner.close();
     }
+    
 }
